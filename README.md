@@ -1,6 +1,6 @@
 # Children's Literacy Learning Platform
 
-![CI](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Deniels1/literacy-platform/actions/workflows/ci.yml/badge.svg)
 
 A production-grade backend for a gamified children's literacy learning platform inspired by Duolingo ABC.
 
