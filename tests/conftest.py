@@ -40,9 +40,11 @@ async def db():
 @pytest_asyncio.fixture(scope="function")
 async def client(db):
     app.dependency_overrides[get_db] = override_get_db
+    
     # Очищаем blacklist перед каждым тестом
-    from app.core.dependencies import _token_blacklist
-    _token_blacklist.clear()
+    import app.core.dependencies as deps
+    deps._token_blacklist.clear()
+    
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as c:
         yield c
     app.dependency_overrides.clear()
