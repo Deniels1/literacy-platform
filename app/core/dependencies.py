@@ -6,6 +6,9 @@ from app.db.session import get_db
 from app.core.security import decode_token
 from app.models.user import Parent, UserRole
 
+def get_token_blacklist():
+    return _token_blacklist
+
 _token_blacklist: set[str] = set()
 
 bearer_scheme = HTTPBearer()
